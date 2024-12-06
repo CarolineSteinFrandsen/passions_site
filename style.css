@@ -1,0 +1,311 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+  background-color: #f0d2bf;
+}
+@font-face {
+  font-family: poppins-regular;
+  src: url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+}
+img {
+  width: 100%;
+  border: 5px #b72525;
+  border-radius: 1%;
+}
+
+main {
+  max-width: 1600px;
+  margin-inline: auto;
+}
+
+/* Hero section */
+.hero {
+  grid-column: 1 / -1;
+  display: flex;
+  width: 100%;
+  align-content: center;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  border: 5px #b72525;
+  border-radius: 1%;
+}
+
+h1 {
+  font-size: 29px;
+  font-family: poppins;
+  margin-top: -0.1rem;
+}
+h2 {
+  font-size: 18px;
+  color: #473020;
+  font-style: italic;
+  font-family: Kohinoor Telugu;
+  margin-top: -2.6rem;
+}
+p {
+  font-size: 15px;
+  color: #473020;
+  font-family: Kohinoor Telugu;
+  font-weight: bolder;
+  margin-top: -0.1rem;
+  padding-bottom: 1rem;
+}
+
+h3 {
+  color: #473020;
+  font-size: 20px;
+  font-family: poppins;
+}
+/* Text and image side-by-side section */
+.text-billede-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-column: 1 / -1;
+}
+
+.text-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-inline-start: 2px;
+  margin-right: 2rem;
+  color: #473020;
+}
+
+.billede-medtekst {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  border: 5px #b72525;
+  border-radius: 1%;
+  padding-bottom: 2rem;
+}
+.underoverskrift {
+  font-size: 20px;
+  font-family: poppins;
+}
+.text-overlay {
+  position: absolute;
+  /* top: 50%; */
+  left: 65%;
+  /* transform: translate(-50%, -50%);  */
+  color: rgba(12, 9, 9, 0.935); /* Juster tekstfarven efter behov */
+  font-size: 15px; /* Juster størrelsen på teksten */
+  font-weight: bold;
+  text-align: center;
+}
+/* galleri sektion */
+
+.billede-gallery {
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+  gap: 16px;
+  grid-column: 1 / -1;
+  padding-bottom: 2rem;
+}
+
+.billede-gallery div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.billede-gallery img {
+  height: 100%;
+  border: 5px #b72525;
+  border-radius: 1%;
+}
+.billede-gallery2 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  grid-column: 1 / -1;
+  padding-bottom: 2rem;
+  padding-top: 2rem;
+}
+
+/* Video sections */
+.video img {
+  align-items: center;
+}
+.video1 {
+  justify-content: center;
+  height: 300px;
+}
+.video2 {
+  justify-content: center;
+  height: 300px;
+}
+.video-container {
+  grid-template-columns: 1fr;
+}
+.video_side {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: center;
+  max-width: 800px;
+  margin-top: 10rem;
+}
+.main_video {
+  justify-content: center;
+}
+
+/* Footer section */
+footer {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 2px;
+}
+.p2_footer {
+  padding-top: 2rem;
+  margin-bottom: -1.2rem;
+}
+.p1 {
+  font-size: 15px;
+  font-family: Kohinoor Telugu;
+  font-weight: lighter;
+  font-style: italic;
+  padding-bottom: 2rem;
+}
+.p2 {
+  font-size: 11px;
+  font-family: Kohinoor Telugu;
+  font-style: italic;
+  font-weight: lighter;
+}
+
+@media (max-width: 800px) {
+  .text-billede-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 800px) {
+  /* Hero section for larger screens */
+  .hero {
+    width: 100%;
+    align-content: center;
+  }
+
+  .text-billede-grid {
+    grid-template-columns: 5fr 7fr;
+    grid-column: span 12;
+  }
+
+  /* Video alignment for desktop */
+  .video-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 16rem;
+    padding: 42px;
+  }
+
+  video {
+    width: 95%; /* Fylder hele grid-cellen */
+    height: auto; /* Bevarer proportionerne */
+    max-width: 100%; /* Forhindrer, at de strækker sig ud over skærmen */
+    border: 1px solid #ccc; /* Valgfrit - for lidt styling */
+    border-radius: 8px; /* Valgfrit - afrundede kanter */
+  }
+
+  iframe {
+    border: 1px solid #ccc; /* Valgfrit - for lidt styling */
+    border-radius: 8px; /* Valgfrit - afrundede kanter */
+  }
+
+  .video_video {
+    padding-top: 15rem;
+  }
+  .billede-gallery {
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr;
+    gap: 35px;
+    grid-column: 1 / -1;
+    padding-top: 2rem;
+  }
+  .billed1_grid {
+    grid-row: span 2;
+    grid-column: span 1;
+    width: 100%;
+  }
+  .billed3_grid {
+    grid-column: span 2;
+    width: 100%;
+  }
+  .text-overlay {
+    position: absolute;
+    left: 80%;
+    color: rgba(12, 9, 9, 0.935); /* Juster tekstfarven efter behov */
+    font-size: 18px; /* Juster størrelsen på teksten */
+    font-weight: bold;
+    text-align: center;
+  }
+  h1 {
+    font-size: 50px;
+    padding-top: 0.8rem;
+  }
+  h2 {
+    font-size: 23px;
+    color: #473020;
+    font-style: italic;
+    margin-top: -3.5rem;
+  }
+  p {
+    padding-top: 1.2rem;
+    font-size: 20px;
+    color: #473020;
+    font-size: 19px;
+  }
+  h3 {
+    color: #473020;
+    font-size: 25px;
+    padding-top: 2rem;
+    margin-bottom: -1rem;
+  }
+  .underoverskrift {
+    font-size: 30px;
+  }
+  .billede-medtekst {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    border: 5px #b72525;
+    border-radius: 1%;
+    padding-bottom: 6rem;
+  }
+  /* Footer section */
+  footer {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 2px;
+  }
+  .p2_footer {
+    padding-top: 2rem;
+    margin-bottom: -3rem;
+  }
+  .p1 {
+    font-size: 18px;
+    font-family: Kohinoor Telugu;
+    font-weight: lighter;
+    font-style: italic;
+    padding-bottom: 2rem;
+  }
+  .p2 {
+    font-size: 13px;
+    font-family: Kohinoor Telugu;
+    font-style: italic;
+    font-weight: lighter;
+  }
+  .billede-gallery2 {
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    gap: 16px;
+    grid-column: 1 / -1;
+    padding-bottom: 2rem;
+    padding-top: 5rem;
+  }
+}
